@@ -1,9 +1,10 @@
-using BandWebApp.Models;
+using Band.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BandWebApp.Controllers
+namespace BandWebApp.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

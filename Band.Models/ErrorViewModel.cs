@@ -1,4 +1,4 @@
-namespace BandWebApp.Models
+namespace Band.Models
 {
     public class ErrorViewModel
     {
