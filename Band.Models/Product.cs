@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Band.Models
 {
@@ -20,6 +22,13 @@ namespace Band.Models
         [Required]
         [Range(1, 1000)]
         public double Price { get; set; }
+        public string SKU {  get; set; }
+        public int CategoryID { get; set; }
+        [ForeignKey("CategoryID")]
+        [ValidateNever]
+        public Category Category { get; set; }
+        [ValidateNever]
+        public string ImageUrl { get; set; }
 
     }
 }

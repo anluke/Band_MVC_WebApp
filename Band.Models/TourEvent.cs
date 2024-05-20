@@ -15,11 +15,7 @@ namespace Band.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Event Date")]
         [Required]
-        public DateOnly Date { get; set; }
-        [DisplayFormat(DataFormatString = @"{0:hh\:mm}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Event Time")]
-        [Required]
-        public TimeOnly Time { get; set; }
+        public DateTime Date { get; set; }
         [Required]
         [DisplayName("Venue Name")]
         public string Venue { get; set; }

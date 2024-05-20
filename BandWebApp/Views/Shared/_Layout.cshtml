@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BandWebApp.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> @* BOOTSTRAP ICONS *@
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>  @* TOASTR BY CODE SEVEN FOR NOTIFICATIONS *@
 </head>
 <body>
     <header>
@@ -37,10 +37,10 @@
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Store</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="TourEvent" asp-action="Index">TourEvent</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="TourEvent" asp-action="Index">Tour</a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                             </ul>
@@ -64,6 +64,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.tiny.cloud/1/ugsxfg1s7hfa9dl45ieps9gx3mmaon1vnyztoif7jpaso7jb/tinymce/7/tinymce.min.js" referrerpolicy="origin" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

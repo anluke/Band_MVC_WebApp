@@ -3,11 +3,11 @@
 <div class="container">
     <div class="row pt-4 pb-3">
         <div class="col-6">
-            <h2 class="text-primary">TourEvent List</h2>
+            <h2 class="text-primary">Tour List</h2>
         </div>
         <div class="col-6 text-end">
             <a asp-controller="TourEvent" asp-action="Create" class="btn btn-primary">
-                <i class="bi bi-plus-lg"></i> Create New TourEvent
+                <i class="bi bi-plus-lg"></i> Create New Tour Event
             </a>
 
         </div>
@@ -28,8 +28,8 @@
         @foreach (var obj in Model)
         {
             <tr>
-                <td>@obj.Date</td>
-                <td>@obj.Time</td>
+                <td>@obj.Date.ToString("dd/MM/yyyy")</td>
+                <td>@obj.Date.ToString("HH:mm")</td>
                 <td>@obj.Venue</td>
                 <td>@obj.City</td>
                 <td>@obj.Country</td>

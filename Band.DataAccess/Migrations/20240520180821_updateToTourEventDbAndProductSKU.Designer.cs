@@ -4,6 +4,7 @@ using Band.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Band.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240520180821_updateToTourEventDbAndProductSKU")]
+    partial class updateToTourEventDbAndProductSKU
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,14 +74,7 @@ namespace Band.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -95,17 +91,13 @@ namespace Band.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryID");
-
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CategoryID = 1,
                             Description = "Black T-Shirt with a band logo on front and back.",
-                            ImageUrl = "",
                             Name = "T-Shirt",
                             Price = 50.0,
                             SKU = "B49L4LD9CI"
@@ -113,9 +105,7 @@ namespace Band.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CategoryID = 1,
                             Description = "Long Sleeve Hoodie with Band logo on front and back.",
-                            ImageUrl = "",
                             Name = "Hoodie",
                             Price = 80.0,
                             SKU = "4YGKW1KCNL"
@@ -123,9 +113,7 @@ namespace Band.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            CategoryID = 1,
                             Description = "Trucker style cap with band logo on the front.",
-                            ImageUrl = "",
                             Name = "Cap",
                             Price = 20.0,
                             SKU = "3FZL5VGCLQ"
@@ -133,9 +121,7 @@ namespace Band.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            CategoryID = 3,
                             Description = "Album in CD format.",
-                            ImageUrl = "",
                             Name = "CD Album",
                             Price = 15.0,
                             SKU = "D6RHWVQIPJ"
@@ -210,17 +196,6 @@ namespace Band.DataAccess.Migrations
                             Date = new DateTime(2024, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "Ziggo Dome"
                         });
-                });
-
-            modelBuilder.Entity("Band.Models.Product", b =>
-                {
-                    b.HasOne("Band.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

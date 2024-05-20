@@ -3,7 +3,7 @@
 <form method="post">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Edit TourEvent</h2>
+            <h2 class="text-primary">Edit Tour Event</h2>
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
@@ -11,12 +11,6 @@
             <label asp-for="Date" class="p-0"></label>
             <input asp-for="Date" class="form-control" />
             <span asp-validation-for="Date" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3 row p-1">
-            <label asp-for="Time" class="p-0"></label>
-            <input asp-for="Time" class="form-control" />
-            <span asp-validation-for="Time" class="text-danger"></span>
         </div>
 
         <div class="mb-3 row p-1">

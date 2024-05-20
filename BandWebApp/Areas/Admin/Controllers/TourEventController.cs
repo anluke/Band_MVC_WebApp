@@ -32,7 +32,7 @@ namespace BandWebApp.Areas.Admin.Controllers
             {
                 _unitOfWork.TourEvent.Add(obj);
                 _unitOfWork.Save();
-                TempData["toast"] = "TourEvent created successfully";
+                TempData["toast"] = "Tour Event created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -63,7 +63,7 @@ namespace BandWebApp.Areas.Admin.Controllers
             {
                 _unitOfWork.TourEvent.Update(obj);
                 _unitOfWork.Save();
-                TempData["toast"] = "TourEvent updated successfully";
+                TempData["toast"] = "Tour Event updated successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -96,7 +96,7 @@ namespace BandWebApp.Areas.Admin.Controllers
 
             _unitOfWork.TourEvent.Remove(obj);
             _unitOfWork.Save();
-            TempData["toast"] = "TourEvent deleted successfully";
+            TempData["toast"] = "Tour Event deleted successfully";
             return RedirectToAction("Index");
         }
     }
