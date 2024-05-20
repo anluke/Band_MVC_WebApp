@@ -9,6 +9,9 @@ namespace Band.DataAccess.Repository.IRepository
     public interface IUnitOfWork
     {
         ICategoryRepository Category { get; }
+        IProductRepository Product { get; }
+        ITourEventRepository TourEvent { get; }
+
 
         void Save();
     }

@@ -4,6 +4,7 @@ using Band.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Band.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240520060411_AddMoreTourEvents")]
+    partial class AddMoreTourEvents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -133,11 +136,8 @@ namespace Band.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("date");
-
-                    b.Property<TimeOnly>("Time")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Venue")
                         .IsRequired()
@@ -153,8 +153,7 @@ namespace Band.DataAccess.Migrations
                             Id = 1,
                             City = "New York",
                             Country = "USA",
-                            Date = new DateOnly(2024, 6, 10),
-                            Time = new TimeOnly(19, 0, 0),
+                            Date = new DateTime(2024, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "Madison Square Garden"
                         },
                         new
@@ -162,8 +161,7 @@ namespace Band.DataAccess.Migrations
                             Id = 2,
                             City = "London",
                             Country = "UK",
-                            Date = new DateOnly(2024, 7, 15),
-                            Time = new TimeOnly(19, 0, 0),
+                            Date = new DateTime(2024, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "The O2 Arena"
                         },
                         new
@@ -171,8 +169,7 @@ namespace Band.DataAccess.Migrations
                             Id = 3,
                             City = "Paris",
                             Country = "France",
-                            Date = new DateOnly(2024, 8, 20),
-                            Time = new TimeOnly(19, 0, 0),
+                            Date = new DateTime(2024, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "AccorHotels Arena"
                         },
                         new
@@ -180,8 +177,7 @@ namespace Band.DataAccess.Migrations
                             Id = 4,
                             City = "Munich",
                             Country = "Germany",
-                            Date = new DateOnly(2024, 9, 5),
-                            Time = new TimeOnly(19, 0, 0),
+                            Date = new DateTime(2024, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "Olympiahalle"
                         },
                         new
@@ -189,8 +185,7 @@ namespace Band.DataAccess.Migrations
                             Id = 5,
                             City = "Amsterdam",
                             Country = "Netherlands",
-                            Date = new DateOnly(2024, 9, 12),
-                            Time = new TimeOnly(19, 0, 0),
+                            Date = new DateTime(2024, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Venue = "Ziggo Dome"
                         });
                 });
