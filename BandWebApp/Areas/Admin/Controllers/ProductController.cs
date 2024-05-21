@@ -73,7 +73,6 @@ namespace BandWebApp.Areas.Admin.Controllers
                             System.IO.File.Delete(oldImagePath);
                         }
                     }
-
                     using ( var fileStream = new FileStream(Path.Combine(productPath, fileName),FileMode.Create))
                     {
                         file.CopyTo(fileStream);
@@ -85,7 +84,6 @@ namespace BandWebApp.Areas.Admin.Controllers
                 if(productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
-
                 }
                 else
                 {
@@ -105,6 +103,7 @@ namespace BandWebApp.Areas.Admin.Controllers
                 return View(productVM);
             }
         }
+
 
         public IActionResult Delete(int? id)
         {
@@ -130,10 +129,18 @@ namespace BandWebApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath,
+                obj.ImageUrl.TrimStart('\\'));
+
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
             _unitOfWork.Product.Remove(obj);
             _unitOfWork.Save();
             TempData["toast"] = "Product deleted successfully";
             return RedirectToAction("Index");
         }
     }
-}
+    }

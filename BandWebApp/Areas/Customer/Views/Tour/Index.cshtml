@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TourEvent>
+
+<div class="container">
+    <div class="row pb-3">
+        @foreach (var tourEvent in Model)
+        {
+            <div class="row p-2 m-2 text-center border border-secondary rounded-2">
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <p class="h5 text-dark opacity-75 text-uppercase">
+                        <strong>@tourEvent.Date.ToString("dd/MM/yyyy")</strong>
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <p class="h5 text-dark opacity-75 text-uppercase">
+                        <strong>@tourEvent.Date.ToString("HH:mm")</strong>
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <p class="h5 text-dark opacity-75 text-uppercase">
+                        @tourEvent.Venue
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <p class="h5 text-dark opacity-75 text-uppercase">
+                        @tourEvent.Country
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <p class="h5 text-dark opacity-75 text-uppercase">
+                        @tourEvent.City
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                    <a class="text-decoration-none btn btn-primary rounded-2" href="https://www.ticketmaster.ie/" target="_blank">
+                        <i class="bi bi-ticket-perforated"></i> Tickets <i class="bi bi-ticket-perforated"></i>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

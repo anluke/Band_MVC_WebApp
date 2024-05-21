@@ -20,7 +20,23 @@ namespace Band.DataAccess.Repository
 
         public void Update(Product obj)
         {
-            _db.Products.Update(obj);
+            var objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
+            if(objFromDb != null)
+            {
+                objFromDb.Name = obj.Name;
+                objFromDb.Description = obj.Description;
+                objFromDb.Price = obj.Price;
+                objFromDb.SKU = obj.SKU;
+                objFromDb.CategoryID = obj.CategoryID;
+                if (obj.ImageUrl != null)
+                {
+                    objFromDb.ImageUrl = obj.ImageUrl;
+                }
+                else
+                {
+                    objFromDb.ImageUrl = "NO IMAGE SELECTED";
+                }
+            }
         }
     }
 }
