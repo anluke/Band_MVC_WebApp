@@ -1,6 +1,107 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BandWebApp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .privacy-header {
+            margin-top: 30px;
+        }
+        .privacy-section {
+            margin-top: 20px;
+        }
+        .privacy-footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container">
+    <div class="privacy-header text-center">
+        <h1>Privacy Policy</h1>
+        <p>Effective Date: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Introduction</h2>
+        <p>Welcome to BandWebApp. Your privacy is important to us, and we are committed to protecting your personal information. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to safeguard it.</p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Information We Collect</h2>
+        <p>We collect various types of information to provide and improve our services to you. This includes:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> Information that can be used to identify you, such as your name, email address, and phone number.</li>
+            <li><strong>Usage Data:</strong> Information about how you use our website, such as your browsing history, search queries, and interactions with our services.</li>
+            <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar technologies to track your activity on our site and collect certain information.</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>How We Use Your Information</h2>
+        <p>Your information is used for various purposes, including but not limited to:</p>
+        <ul>
+            <li>Providing and maintaining our service</li>
+            <li>Notifying you about changes to our service</li>
+            <li>Allowing you to participate in interactive features of our service</li>
+            <li>Providing customer support</li>
+            <li>Gathering analysis or valuable information to improve our service</li>
+            <li>Monitoring the usage of our service</li>
+            <li>Detecting, preventing, and addressing technical issues</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Information Sharing and Disclosure</h2>
+        <p>We do not sell your personal information. However, we may share your information with third parties in the following situations:</p>
+        <ul>
+            <li><strong>With Service Providers:</strong> We may share your information with third-party service providers to perform tasks on our behalf, such as payment processing, data analysis, email delivery, and hosting services.</li>
+            <li><strong>For Legal Reasons:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of the transaction.</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Security of Your Information</h2>
+        <p>We use various security measures to protect your information. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Your Data Protection Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+        <ul>
+            <li>The right to access – You have the right to request copies of your personal data.</li>
+            <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</li>
+            <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+            <li>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+            <li>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</li>
+            <li>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <ul>
+            <li>By email: support@bandwebapp.com</li>
+            <li>By visiting this page on our website: www.bandwebapp.com/contact</li>
+            <li>By phone number: +1-234-567-890</li>
+        </ul>
+    </div>
+</div>
+
+<div class="privacy-footer text-center">
+    <p>&copy; 2024 BandWebApp. All rights reserved.</p>
+</div>
+</body>
+</html>

@@ -18,5 +18,39 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+
+#hero {
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/home/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.social-links {
+    height: 200px;
+    align-content: center;
+    letter-spacing: 20px;
+}
+
+#social-media a {
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+        color: #B20000 !important;
+    }
+
+#videos iframe {
+    height: 100vh;
+    width: 100vw;
 }

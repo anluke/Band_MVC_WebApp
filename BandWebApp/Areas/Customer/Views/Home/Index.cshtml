@@ -1,31 +1,32 @@
-﻿@model IEnumerable<Product>
-
-<div class="row pb-3">
-    @foreach (var product in Model)
-    {
-        <div class="col-lg-3 col-sm-6">
-            <div class="row p-2">
-                <div class="col-12 p-1">
-                    <div class="card border-0 p-3 shadow border-top border-5 rounded">
-                        <img src="@product.ImageUrl" class="card-img-top rounded" />
-                        <div class="card-body pb-0">
-                            <div class="pl-1">
-                                <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">
-                                    @product.Name
-                                </p>
-                                <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">
-                                    @product.Description
-                                </p>
-                            </div>
-                            <div class="pl-1">
-                                <p class="text-dark text-opacity-75 text-center">
-                                    Price: <span>@product.Price.ToString("c")</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+﻿<div id="home-section">
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <a asp-area="Customer" asp-controller="Store" asp-action="Index" class="btn btn-primary btn-lg rounded-3 bg-black">Visit Our Store</a>
+        </div>
+    </section>
+    <!-- Social Media Section -->
+    <section id="social-media" class="text-center py-3 bg-black">
+        <div class="container">
+            <h4 class="text-light text-lg-center">Follow us on Social Media:</h4>
+            <div class="social-links d-flex justify-content-center align-items-center">
+                <a href="https://open.spotify.com" target="_blank" class="mx-3 text-light"><i class="bi bi-spotify"></i></a>
+                <a href="https://www.deezer.com" target="_blank" class="mx-3 text-light"><i class="bi bi-music-note-list"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="mx-3 text-light"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="mx-3 text-light"><i class="bi bi-facebook"></i></a>
             </div>
         </div>
-    }
+    </section>
+    <!-- YouTube Videos Section -->
+    <section id="videos">
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f3L9_6aJi2Q?si=zFclEcY_-WydnGZz" title="Song 1" allowfullscreen></iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1uB2ZRjbtbY?si=hECRpEhXeBzRZG6l" title="Song 2" allowfullscreen></iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yMDoj8VVzh8?si=NW1Qc-baeA_cZGyi" title="Song 3" allowfullscreen></iframe>
+        </div>
+    </section>
 </div>
