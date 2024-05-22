@@ -2,7 +2,7 @@
 
 # Band E-Commerce Website
 
-Link to a live page can be found here: [BANDWEBAPP]([URL](https://bandwebapp.azurewebsites.net))
+Link to a live page can be found here: [BANDWEBAPP](https://bandwebapp.azurewebsites.net)
 
 Webpage was deployed on Azure Cloud using GitHub actions.
 
