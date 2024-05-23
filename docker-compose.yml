@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bandwebapp:
+    image: ${DOCKER_REGISTRY-}bandwebapp
+    build:
+      context: .
+      dockerfile: BandWebApp\Dockerfile
